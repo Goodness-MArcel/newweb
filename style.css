@@ -1,0 +1,53 @@
+.section{
+    height: 600px;
+    position: relative;
+    background-image: linear-gradient(
+        to right,
+        red,
+        yellow
+    );
+    /* overflow: hidden; */
+    /* border: thin solid red; */
+
+}
+.hero-shape{
+    /* border: 4px solid; */
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: white;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0);
+}
+.box{
+    border: thin solid red;
+    width: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.box:hover .box::before{
+    opacity: 0;
+    width: 0px;
+}
+img {
+   filter: blur(5px) brightness(100%);
+   width: 100%;
+   display: block;
+   
+}
+.box::before{
+    content: '';
+    background-color: rgb(26, 24, 24,0.5);
+    left: 0;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    /* z-index: 12; */
+    opacity: 1;
+    
+}
+/* .box::before:hover{
+    opacity: 0;
+} */
